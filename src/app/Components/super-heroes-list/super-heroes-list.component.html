@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <app-hero-detail [hero]="heroes"></app-hero-detail>
+    <div *ngFor="let hero of goodHeroes">
+        ID : {{hero.id}} 
+         Name : {{hero.name}} 
+         alignment : {{hero.biography.alignment}} 
+         gender : {{hero.appearance.gender}} 
+        <!-- <img  src="{{hero.image.url}}" alt="Image de tout les Super Héros">  -->
+    </div>
+
+    <p>
+        <label>
+          <input class="with-gap" type="radio" [(ngModel)]="goodonly" name="goodbad" value="good"/>
+          <span>good</span>
+        </label>
+        <label>
+            <input class="with-gap" type="radio" [(ngModel)]="goodonly" name="goodbad" value="bad"/>
+            <span>bad</span>
+        </label>
+        <label>
+            <input class="with-gap" type="radio" [(ngModel)]="gender" name="gender" value="Male"/>
+            <span>Male</span>
+        </label>
+        <label>
+            <input class="with-gap" type="radio" [(ngModel)]="gender" name="gender" value="Female"/>
+            <span>Female</span>
+        </label>
+        <label>
+            <input class="with-gap"  type="radio" [(ngModel)]="gender" name="gender" value="-"/>
+            <span>Aucun</span>
+        </label>
+    </p>
+    <p>
+
+    </p>
+    <!-- <input type="radio" [(ngModel)]="goodonly" name="goodbad" value="good"> <label for="">good</label>
+    <input type="radio" [(ngModel)]="goodonly" name="goodbad" value="bad"> <label for="">bad</label>
+    <input type="radio" [(ngModel)]="gender" name="gender" value="Male"><label for="">Male</label>
+    <input type="radio" [(ngModel)]="gender" name="gender" value="Female"> <label for="">Female</label>
+    <input type="radio" [(ngModel)]="gender" name="gender" value="-"> <label for="">-</label> -->
+    <!-- <input type="range" min="0" max="400" [(ngModel)]="wantedSize"> -->
+
