@@ -10,13 +10,15 @@ import { HeroDetailComponent } from './Components/hero-detail/hero-detail.compon
 import { MaterializeButtonModule, MaterializeCardModule } from 'materialize-angular';
 import { FormsModule } from '@angular/forms';
 import { NavigationComponent } from './Components/navigation/navigation.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SuperHeroesListComponent,
     HeroDetailComponent,
-    NavigationComponent
+    NavigationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

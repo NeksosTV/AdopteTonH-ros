@@ -27,10 +27,14 @@ export class SuperHeroesListComponent implements OnInit {
     return this._Filteralignement.filter(hero => hero.appearance?.gender  === this.gender)
   }
 
+  private get _FiltereyeColor():Iprofile[]{
+    return this._Filteralignement.filter(hero => hero.appearance?.eyeColo  === this.gender)
+  }
+
 
 //Afficher par rappport au  meters des Héros
   public get goodHeroes():Iprofile[]{
-    return this._heroesHeight.slice(0 ,10)
+    return this._heroesHeight.slice(0 ,10)  // ICI on choisi d'afficher de 1 a 10 image  mes pas plus avec le .slice(0 ,10) 
   }
 
   private get _heroesHeight():Iprofile[]{

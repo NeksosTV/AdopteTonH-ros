@@ -1,2 +1,111 @@
 <app-navigation></app-navigation>
 <router-outlet></router-outlet>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+<header id="showcase">
+  <!-- <div class="TITRE"> -->
+<div class="titre">
+    <p >Adopte un super héros !</p>
+ </div>
+  <!-- <a routerLink="/hero" class="button">En savoir plus</a> -->
+</header>
+
+<main>
+  <h3>Bienvenue aux fans et aux nouveaux venus!</h3>
+
+  <p>
+    Nous avons le plaisir de vous présenter notre nouvelle application de
+    rencontre pour super héros!
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, vitae
+    consequuntur vero atque, exercitationem suscipit labore ullam distinctio ex
+    rem est sit accusamus sed illum. Tempora minima excepturi consequuntur quo?
+    Ut sunt nemo harum numquam ipsa sint quidem maxime, accusantium sit, saepe
+    sed. Fuga tempore ipsum voluptatibus officia distinctio id similique,
+    maiores asperiores. Facilis error porro aut possimus, est natus!
+  </p>
+  <section>
+    <form action="index.html" method="POST">
+      <h2>Choisis comment sera ton super heros!</h2>
+      <p>
+        <label>
+          <input id="indeterminate-checkbox" type="checkbox" required/>
+          <span>Femme</span>
+        </label>
+        <label>
+          <input id="indeterminate-checkbox" type="checkbox" />
+          <span>Homme</span>
+        </label>
+        <label>
+          <input id="indeterminate-checkbox" type="checkbox" />
+          <span>Les deux</span>
+        </label>
+      </p>
+
+      
+      <div>
+        <label for="conditions">Caractéristique 1</label>
+        <input type="checkbox" id="conditions" name="conditions" />
+      </div>
+      <div>
+        <label for="conditions">Caractéristique 2</label>
+        <input type="checkbox" id="conditions" name="conditions" />
+      </div>
+      <div>
+        <label for="conditions">Caractéristique 3</label>
+        <input type="checkbox" id="conditions" name="conditions" />
+      </div>
+      <div>
+        <label for="select">Mon héros doit avoir les yeux : </label>
+        <select name="eye-color" id="">
+          <optgroup label="">
+            <option value="Blue">Bleu</option>
+          </optgroup>
+
+          <optgroup label="">
+            <option value="Green">Vert</option>
+          </optgroup>
+
+          <optgroup label="">
+            <option value="Brown">Brun</option>
+          </optgroup>
+
+          <optgroup label="">
+            <option value="Others">Autres</option>
+          </optgroup>
+        </select>
+      </div>
+      <div>
+        <label for="select">Mon héros doit avoir les cheveux : </label>
+        <select name="hair-color" id="">
+          <optgroup label="">
+            <option value="Brown">Bruns</option>
+          </optgroup>
+
+          <optgroup label="">
+            <option value="Blond">Blond</option>
+          </optgroup>
+
+          <optgroup label="">
+            <option value="Red">Roux</option>
+          </optgroup>
+
+          <optgroup label="">
+            <option value="Others">Autres</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Annuler" />
+      </div>
+    </form>
+  </section>
+</main>
+
+<app-footer></app-footer>

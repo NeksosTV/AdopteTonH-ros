@@ -3,7 +3,7 @@
     
 
 
-    <h1 class="center">Choisis comment sera ton super heros!</h1>
+   
     <p class="center">    
         <label>
           <input class="with-gap" type="radio" [(ngModel)]="goodonly" name="goodbad" value="good"/>
@@ -61,6 +61,8 @@
                     <p>
                       alignment : {{hero.biography.alignment}} 
                       gender : {{hero.appearance.gender}} 
+                     
+                      {{hero.appearance.eyeColor}}
                     </p>
                   </div>
                   <div class="card-action">
