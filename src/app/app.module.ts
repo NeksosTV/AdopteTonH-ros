@@ -9,12 +9,14 @@ import { SuperHeroesListComponent } from './Components/super-heroes-list/super-h
 import { HeroDetailComponent } from './Components/hero-detail/hero-detail.component';
 import { MaterializeButtonModule, MaterializeCardModule } from 'materialize-angular';
 import { FormsModule } from '@angular/forms';
+import { NavigationComponent } from './Components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SuperHeroesListComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

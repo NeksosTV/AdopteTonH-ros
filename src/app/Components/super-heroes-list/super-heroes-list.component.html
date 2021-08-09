@@ -1,11 +1,32 @@
 
 
+    
     <app-hero-detail [hero]="heroes"></app-hero-detail>
     <div *ngFor="let hero of goodHeroes">
-        ID : {{hero.id}} 
-         Name : {{hero.name}} 
-         alignment : {{hero.biography.alignment}} 
-         gender : {{hero.appearance.gender}} 
+
+         <div class="row" style= "width:500px">
+            <div class="col s6 m5">
+              <div class="card">
+                <div class="card-image m6" >
+                  <img  class="img-responsive m6 " src="{{hero.image.url}}" >
+                  <span class="card-title"> {{hero.name}} </span>
+                </div>
+                <div class="card-content">
+                  <p>
+                    alignment : {{hero.biography.alignment}} 
+                    gender : {{hero.appearance.gender}} 
+                  </p>
+                </div>
+                <div class="card-action">
+                    <a target="_BLANK" href="https://www.superheroapi.com/api.php/1458081961231168/{{hero.id}}">ID : {{hero.id}}</a> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ID : {{hero.id}} 
+          Name : {{hero.name}} 
+          alignment : {{hero.biography.alignment}} 
+          gender : {{hero.appearance.gender}}  -->
         <!-- <img  src="{{hero.image.url}}" alt="Image de tout les Super Héros">  -->
     </div>
 
@@ -31,10 +52,11 @@
             <span>Aucun</span>
         </label>
     </p>
+
+
     <!-- <input type="radio" [(ngModel)]="goodonly" name="goodbad" value="good"> <label for="">good</label>
     <input type="radio" [(ngModel)]="goodonly" name="goodbad" value="bad"> <label for="">bad</label>
     <input type="radio" [(ngModel)]="gender" name="gender" value="Male"><label for="">Male</label>
     <input type="radio" [(ngModel)]="gender" name="gender" value="Female"> <label for="">Female</label>
     <input type="radio" [(ngModel)]="gender" name="gender" value="-"> <label for="">-</label> -->
     <!-- <input type="range" min="0" max="400" [(ngModel)]="wantedSize"> -->
-
