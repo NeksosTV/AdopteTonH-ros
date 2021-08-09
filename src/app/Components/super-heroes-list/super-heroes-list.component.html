@@ -33,24 +33,7 @@
     <app-hero-detail [hero]="heroes"></app-hero-detail>
     <div [ngStyle]="{display: 'flex', flexWrap: 'wrap'}">
 
-       
-            <!-- <div class="col s12 m5">
-              <div class="card" >
-                <div class="card-image m6" >
-                  <img  class="img-responsive m6"  src="{{hero.image.url}}" >
-                  <span class="card-title"> {{hero.name}} </span>
-                </div>
-                <div class="card-content">
-                  <p>
-                    alignment : {{hero.biography.alignment}} 
-                    gender : {{hero.appearance.gender}} 
-                  </p>
-                </div>
-                <div class="card-action">
-                    <a target="_BLANK" href="https://www.superheroapi.com/api.php/1458081961231168/{{hero.id}}">ID : {{hero.id}}</a> 
-                </div>
-              </div>
-            </div> -->
+      
             
                 <div  *ngFor="let hero of goodHeroes" class="card" [ngStyle]="{width:'20%', margin : '5%'}">
                   <div class="card-image m6" >
