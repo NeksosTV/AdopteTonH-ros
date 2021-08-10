@@ -9,3 +9,4 @@ export interface Iprofile {
     connections? : any ;
 }
 
+//caractéristiques de l'API
