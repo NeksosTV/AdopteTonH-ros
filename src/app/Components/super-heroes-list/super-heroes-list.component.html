@@ -1,16 +1,16 @@
 
 
-    
+  <!-- Menu de filtrage des Card des Héros -->  
 
 <div class="bg"> 
     <p class="center">    
         <label>
           <input class="with-gap CAT" type="radio" [(ngModel)]="goodonly" name="goodbad" value="good"/>
-          <span>Bon/ne</span>
+          <span>Gentil(le)s</span>
         </label>
         <label>
             <input class="with-gap" type="radio" [(ngModel)]="goodonly" name="goodbad" value="bad"/>
-            <span>Mauvais/e</span>
+            <span>Méchant(e)s</span>
         </label><br>
         <label>
             <input class="with-gap" type="radio" [(ngModel)]="gender" name="gender" value="Male"/>
@@ -22,45 +22,37 @@
         </label>
         <label>
             <input class="with-gap"  type="radio" [(ngModel)]="gender" name="gender" value="-"/>
-            <span>indéterminé</span>
+            <span>Indéterminé</span>
         </label>        
         <!-- <input type="range" min="0" max="200" [(ngModel)]="wantedSize">  -->     
     </p>
 </div>
+<!-- ------------------------------------------ -->
 
-
-
-    <app-hero-detail [hero]="heroes"></app-hero-detail>
-    <div [ngStyle]="{display: 'flex', flexWrap: 'wrap'}">
-
-      
-            
-                <div  *ngFor="let hero of goodHeroes" class="card" [ngStyle]="{width:'20%', margin : '5%'}">
-                  <div class="card-image m6" >
-                    <img  class="img-responsive m6"  src="{{hero.image.url}}" >
-                    <span class="card-title"> {{hero.name}} </span>
-                  </div>
-                  <div class="card-content">
-                    <p>
-                      Attitude : {{hero.biography.alignment}} <br>
-                      Genre : {{hero.appearance.gender}} <br>
-                     
-                     Couleur yeux : {{hero.appearance['eye-color']}}<br>
-                      Couleur cheveux : {{hero.appearance['hair-color']}}<br>
-                      Nom complet: {{hero.biography['full-name']}}
-                    </p>
-                  </div>
-                  <div class="card-action">
-                      <a target="_BLANK" href="https://www.superheroapi.com/api.php/1458081961231168/{{hero.id}}">ID : {{hero.id}}</a> 
-                  </div>
-                </div>
-        
-          <!-- ID : {{hero.id}} 
-          Name : {{hero.name}} 
-          alignment : {{hero.biography.alignment}} 
-          gender : {{hero.appearance.gender}}  -->
-        <!-- <img  src="{{hero.image.url}}" alt="Image de tout les Super Héros">  -->
-    </div>
+<!-- Card des Héros -->
+<app-hero-detail [hero]="heroes"></app-hero-detail>
+<div [ngStyle]="{display: 'flex', flexWrap: 'wrap', width:'80%', marginLeft:'10%'}" class="containeur">              
+      <div  *ngFor="let hero of goodHeroes" class="card" [ngStyle]="{width:'20%', margin : '5%'}">
+        <div class="card-image m6" >
+          <img  class="img-responsive m6"  src="{{hero.image.url}}" (error)="defaultsrc(image)" #image>
+          <span class="card-title"> {{hero.name}} </span>
+        </div>
+        <div class="card-content">
+          <p>
+            Attitude : {{hero.biography.alignment}} <br>
+            Genre : {{hero.appearance.gender}} <br>
+          
+          Couleur des yeux : {{hero.appearance['eye-color']}}<br>
+            Couleur des cheveux : {{hero.appearance['hair-color']}}<br>
+            Nom complet: {{hero.biography['full-name']}}
+          </p>
+        </div>
+        <div class="card-action">
+            <a target="_BLANK" href="https://www.superheroapi.com/api.php/1458081961231168/{{hero.id}}">ID : {{hero.id}}</a> 
+        </div>
+      </div>
+</div>
+<!-- ------------------------------------------ -->
 
 
 

@@ -19,28 +19,32 @@ export class SuperHeroesListComponent implements OnInit {
   public heroes : Iprofile[] = [];
   public wantedSize : number = 0;
   
+
+//Filtre les caractéristiques .biography.alignment 
   private get _Filteralignement():Iprofile[]{
     return this.heroes.filter(hero => hero.biography.alignment  === this.goodonly)
   }
 
+//Filtre les caractéristiques .appearance?.gender
   private get _Filtergender():Iprofile[]{
     return this._Filteralignement.filter(hero => hero.appearance?.gender  === this.gender)
   }
 
+//Quand j'ai une caractéristiques comme sa eye-color avec Tiret je dois procéder comme ceci => hero.appearance['full-name'] 
   private get _FiltereyeColor():Iprofile[]{
-    return this._Filteralignement.filter(hero => hero.appearance['eye-color']  === this.gender)
+    return this._Filteralignement.filter(hero => hero.appearance['eye-color']  === this.gender) // Filtre la eye-color 
   }
   private get _FilterhairColor():Iprofile[]{
-    return this._Filteralignement.filter(hero => hero.appearance['hair-color']  === this.gender)
+    return this._Filteralignement.filter(hero => hero.appearance['hair-color']  === this.gender) // Filtre la hair-color
   }
   private get _FilterfullName():Iprofile[]{
-    return this._Filteralignement.filter(hero => hero.appearance['full-name']  === this.gender)
+    return this._Filteralignement.filter(hero => hero.appearance['full-name']  === this.gender) // Filtre le full-name'
   }
 
 
-//Afficher par rappport au  meters des Héros
+//Afficher les Héros par rappport au  meters des Héros
   public get goodHeroes():Iprofile[]{
-    return this._heroesHeight.slice(0 ,20)  // ICI on choisi d'afficher de 1 a 10 image  mes pas plus avec le .slice(0 ,10) 
+    return this._heroesHeight.slice(0 ,20)  // ICI on choisi d'afficher  20 Card Héros Maximun avec le .slice(0 ,10) 
   }
 
   private get _heroesHeight():Iprofile[]{
@@ -59,6 +63,8 @@ export class SuperHeroesListComponent implements OnInit {
     });
   }
 //----------------------------------------------
+
+//Boucle pour avoir des ID aléatoire lors des chargement des caractéristiques
   constructor(private _ApiService: HerosService) {};
   ngOnInit(){
     for (let i = 1 ; i < 731 ; i++) {
@@ -69,6 +75,10 @@ export class SuperHeroesListComponent implements OnInit {
         }
       )
     }
+  }
+
+  public defaultsrc(img : HTMLImageElement){
+    img.src = "./assets/NotFound.png"
   }
 
 }
