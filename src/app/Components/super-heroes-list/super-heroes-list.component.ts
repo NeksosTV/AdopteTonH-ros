@@ -28,13 +28,19 @@ export class SuperHeroesListComponent implements OnInit {
   }
 
   private get _FiltereyeColor():Iprofile[]{
-    return this._Filteralignement.filter(hero => hero.appearance?.eyeColo  === this.gender)
+    return this._Filteralignement.filter(hero => hero.appearance['eye-color']  === this.gender)
+  }
+  private get _FilterhairColor():Iprofile[]{
+    return this._Filteralignement.filter(hero => hero.appearance['hair-color']  === this.gender)
+  }
+  private get _FilterfullName():Iprofile[]{
+    return this._Filteralignement.filter(hero => hero.appearance['full-name']  === this.gender)
   }
 
 
 //Afficher par rappport au  meters des Héros
   public get goodHeroes():Iprofile[]{
-    return this._heroesHeight.slice(0 ,6)  // ICI on choisi d'afficher de 1 a 10 image  mes pas plus avec le .slice(0 ,10) 
+    return this._heroesHeight.slice(0 ,20)  // ICI on choisi d'afficher de 1 a 10 image  mes pas plus avec le .slice(0 ,10) 
   }
 
   private get _heroesHeight():Iprofile[]{

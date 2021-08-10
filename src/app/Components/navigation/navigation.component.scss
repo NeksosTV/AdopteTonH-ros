@@ -2,16 +2,21 @@
     background-color: rgb(179, 0, 0);
     font-family: 'Bangers', cursive;
     padding-left: 100px;
+    text-shadow: 0.2em 0.2em 0.2em rgba(88, 87, 87, 0.8);
+
     
 }
 
 .brand-logo{
     height: 25px;
     // color: black;
+    // background: url(Teams-image.PNG);
 }
 
 .logo{
     width: 60px;
+    height: auto;
+    padding-right: 5px;
 }
 
 .MENUE{

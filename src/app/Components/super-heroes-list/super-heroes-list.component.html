@@ -2,31 +2,31 @@
 
     
 
-
-   
+<div class="bg"> 
     <p class="center">    
         <label>
-          <input class="with-gap" type="radio" [(ngModel)]="goodonly" name="goodbad" value="good"/>
-          <span>good</span>
+          <input class="with-gap CAT" type="radio" [(ngModel)]="goodonly" name="goodbad" value="good"/>
+          <span>Bon/ne</span>
         </label>
         <label>
             <input class="with-gap" type="radio" [(ngModel)]="goodonly" name="goodbad" value="bad"/>
-            <span>bad</span>
-        </label>
+            <span>Mauvais/e</span>
+        </label><br>
         <label>
             <input class="with-gap" type="radio" [(ngModel)]="gender" name="gender" value="Male"/>
-            <span>Male</span>
+            <span>Homme</span>
         </label>
         <label>
             <input class="with-gap" type="radio" [(ngModel)]="gender" name="gender" value="Female"/>
-            <span>Female</span>
+            <span>Femme</span>
         </label>
         <label>
             <input class="with-gap"  type="radio" [(ngModel)]="gender" name="gender" value="-"/>
-            <span>Aucun</span>
-        </label>
+            <span>indéterminé</span>
+        </label>        
+        <!-- <input type="range" min="0" max="200" [(ngModel)]="wantedSize">  -->     
     </p>
-
+</div>
 
 
 
@@ -42,10 +42,12 @@
                   </div>
                   <div class="card-content">
                     <p>
-                      alignment : {{hero.biography.alignment}} 
-                      gender : {{hero.appearance.gender}} 
+                      Attitude : {{hero.biography.alignment}} <br>
+                      Genre : {{hero.appearance.gender}} <br>
                      
-                      {{hero.appearance.eyeColor}}
+                     Couleur yeux : {{hero.appearance['eye-color']}}<br>
+                      Couleur cheveux : {{hero.appearance['hair-color']}}<br>
+                      Nom complet: {{hero.biography['full-name']}}
                     </p>
                   </div>
                   <div class="card-action">

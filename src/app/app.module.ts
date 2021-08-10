@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SuperHeroesListComponent } from './Components/super-heroes-list/super-heroes-list.component';
 import { HeroDetailComponent } from './Components/hero-detail/hero-detail.component';
 import { MaterializeButtonModule, MaterializeCardModule } from 'materialize-angular';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavigationComponent } from './Components/navigation/navigation.component';
 import { FooterComponent } from './Components/footer/footer.component';
 
@@ -26,7 +26,8 @@ import { FooterComponent } from './Components/footer/footer.component';
     HttpClientModule,
     MaterializeButtonModule,
     MaterializeCardModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   
   ],
   providers: [],

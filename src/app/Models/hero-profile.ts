@@ -6,7 +6,7 @@ export class HeroProfile {
 
     public get Name() : string {return this._herodata.name;}
 
-    public get Gender() : string {return this._herodata.appearence.gender;}
+    public get Gender() : string {return this._herodata.appearance.gender;}
 
     constructor (data:Iprofile) {
         this._herodata = data ;

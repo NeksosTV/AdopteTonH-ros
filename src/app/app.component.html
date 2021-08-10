@@ -13,14 +13,14 @@
 </header>
 
 
-<main>
-  <h3>Bienvenue aux fans et aux nouveaux venus!</h3>
 
-  <p>
+  <h3 class="center">Bienvenue aux fans et aux nouveaux venus!</h3>
+
+  <p class="center">
     Nous avons le plaisir de vous présenter notre nouvelle application de
     rencontre pour super héros!
   </p>
-  <p>
+  <p class="center">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, vitae
     consequuntur vero atque, exercitationem suscipit labore ullam distinctio ex
     rem est sit accusamus sed illum. Tempora minima excepturi consequuntur quo?
@@ -28,83 +28,23 @@
     sed. Fuga tempore ipsum voluptatibus officia distinctio id similique,
     maiores asperiores. Facilis error porro aut possimus, est natus!
   </p>
-  <section>
-    <form action="index.html" method="POST">
+
+    <!-- <form action="index.html" method="POST" [formGroup]="Formulaire" (ngSubmit)="ValidFormulaire()">
       <h2>Choisis comment sera ton super heros!</h2>
-      <p>
+       <p>
         <label>
-          <input id="indeterminate-checkbox" type="checkbox" required/>
+          <input id="indeterminate-checkbox" type="checkbox" required formControlName="Femme" />
           <span>Femme</span>
         </label>
         <label>
-          <input id="indeterminate-checkbox" type="checkbox" />
+          <input id="indeterminate-checkbox" type="checkbox" [formControl]="Formulaire.controls['Homme']" />
           <span>Homme</span>
         </label>
         <label>
-          <input id="indeterminate-checkbox" type="checkbox" />
-          <span>Les deux</span>
+          <input id="indeterminate-checkbox" type="checkbox" formControlName="Indeterminate" />
+          <span>Indeterminate</span>
         </label>
-      </p>
+      </p> - -->
 
-      
-      <div>
-        <label for="conditions">Caractéristique 1</label>
-        <input type="checkbox" id="conditions" name="conditions" />
-      </div>
-      <div>
-        <label for="conditions">Caractéristique 2</label>
-        <input type="checkbox" id="conditions" name="conditions" />
-      </div>
-      <div>
-        <label for="conditions">Caractéristique 3</label>
-        <input type="checkbox" id="conditions" name="conditions" />
-      </div>
-      <div>
-        <label for="select">Mon héros doit avoir les yeux : </label>
-        <select name="eye-color" id="">
-          <optgroup label="">
-            <option value="Blue">Bleu</option>
-          </optgroup>
-
-          <optgroup label="">
-            <option value="Green">Vert</option>
-          </optgroup>
-
-          <optgroup label="">
-            <option value="Brown">Brun</option>
-          </optgroup>
-
-          <optgroup label="">
-            <option value="Others">Autres</option>
-          </optgroup>
-        </select>
-      </div>
-      <div>
-        <label for="select">Mon héros doit avoir les cheveux : </label>
-        <select name="hair-color" id="">
-          <optgroup label="">
-            <option value="Brown">Bruns</option>
-          </optgroup>
-
-          <optgroup label="">
-            <option value="Blond">Blond</option>
-          </optgroup>
-
-          <optgroup label="">
-            <option value="Red">Roux</option>
-          </optgroup>
-
-          <optgroup label="">
-            <option value="Others">Autres</option>
-          </optgroup>
-        </select>
-      </div>
-
-      <div>
-        <input type="submit" value="Submit" />
-        <input type="reset" value="Annuler" />
-      </div>
-    </form>
-  </section>
-</main>
+   
 <app-footer></app-footer>
